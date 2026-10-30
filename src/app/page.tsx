@@ -1,69 +1,146 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
+  const personal = [
+    { label: "Date of Birth", value: "18 October 1998" },
+    { label: "Place of Birth", value: "Deoria, Uttar Pradesh" },
+    { label: "Height", value: `5' 5" (165 cm)` },
+    { label: "Religion", value: "Islam" },
+    { label: "Caste", value: "Shaikh" },
+    { label: "Nationality", value: "Indian" },
+  ];
+
+  const professional = [
+    { label: "Occupation", value: "Mechanical Designer Engineer" },
+    {
+      label: "Company",
+      value: "Jacobs India Solution Pvt. Ltd., Mumbai",
+    },
+  ];
+
+  const family = [
+    { label: "Father", value: "Late Gulam Gaush Shaikh" },
+    { label: "Mother", value: "Jannatun Nisha" },
+    { label: "Brothers", value: "1" },
+    { label: "Sisters", value: "1 (Married)" },
+    { label: "Uncle", value: "Gulam Sarvar Shaikh" },
+    { label: "Cousins", value: "1 Brother, 1 Sister" },
+  ];
+
+  const contact = [
+    {
+      label: "Contact No.",
+      value: "+91 97213 84792 (Uncle — Gulam Sarvar Shaikh)",
+    },
+    {
+      label: "Address",
+      value:
+        "Village: Bharawalia, Post: Barpar, District: Deoria, Uttar Pradesh — 274201",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="min-h-screen bg-[#e9e4d8] flex justify-center py-8 px-4 print:bg-white print:p-0">
+      <div className="w-[794px] min-h-[1123px] bg-[#fffdf7] border-[10px] border-[#0b3d2e] relative overflow-hidden shadow-2xl print:shadow-none print:border-[8px] print:w-full print:min-h-screen font-serif">
+        {/* Top Band */}
+        <div className="bg-[#0b3d2e] text-[#f5e6b8] text-center px-5 pt-6 pb-4">
+          {/* <div className="text-[28px] mb-2">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div> */}
+          <h1 className="text-[26px] tracking-[3px] uppercase mb-1 text-white font-normal">
+            Marriage Biodata
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+          <div className="text-[11px] tracking-[3px] uppercase text-[#f5e6b8]">
+            In the Name of Allah, The Most Gracious, The Most Merciful
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Gold Striped Divider */}
+        <div
+          className="h-1.5"
+          style={{
+            background:
+              "repeating-linear-gradient(90deg, #c9a227 0 14px, #0b3d2e 14px 28px)",
+          }}
+        />
+
+        {/* Photo */}
+        
+
+        {/* Name */}
+        <div className="text-center mt-4 mb-2">
+          <h2 className="text-[40px] text-[#0b3d2e] tracking-[2px] font-semibold m-0">
+            SUHEL WARSI
+          </h2>
+         
         </div>
-      </main>
+
+        {/* Sections */}
+        <Section title="Personal Details" items={personal} />
+        <Section
+          title="Education"
+          items={[
+            {
+              label: "Qualification",
+              value: "Diploma in Mechanical Engineering",
+            },
+          ]}
+          single
+        />
+        <Section title="Professional Details" items={professional} />
+        <Section title="Family Background" items={family} />
+        <Section title="Contact Information" items={contact} single />
+
+        {/* Footer */}
+        <div className="absolute bottom-0 left-0 right-0 bg-[#0b3d2e] text-[#f5e6b8] text-center px-5 py-3 text-[11px]">
+          {/* <div className="text-[16px] mb-1">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا
+          </div> */}
+          {/* <div>
+            &quot;And among His signs is that He created for you mates from
+            among yourselves, that you may dwell in tranquillity with
+            them.&quot; — Qur&apos;an 30:21
+          </div> */}
+        </div>
+      </div>
+    </main>
+  );
+}
+
+type InfoItem = { label: string; value: string };
+
+function Section({
+  title,
+  items,
+  single = false,
+}: {
+  title: string;
+  items: InfoItem[];
+  single?: boolean;
+}) {
+  return (
+    <div className="mx-[34px] mt-4">
+      <div className="flex items-center gap-2.5 text-[15px] text-[#0b3d2e] uppercase tracking-[1.5px] border-b-2 border-[#c9a227] pb-1 mb-2.5 font-bold">
+        <span className="w-[26px] h-[26px] bg-[#0b3d2e] text-[#f5e6b8] rounded-full flex items-center justify-center text-[13px] flex-shrink-0">
+          ✦
+        </span>
+        {title}
+      </div>
+      <div
+        className={`grid gap-x-[18px] gap-y-2 ${
+          single ? "grid-cols-1" : "grid-cols-2"
+        }`}
+      >
+        {items.map((item) => (
+          <div
+            key={item.label}
+            className="flex text-[13px] px-2.5 py-1.5 bg-[#fbf8ef] border-l-[3px] border-[#c9a227] rounded"
+          >
+            <span className="font-bold text-[#0b3d2e] min-w-[105px] flex-shrink-0">
+              {item.label}
+            </span>
+            <span className="text-[#333]">{item.value}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
